@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Ops 3 Random Class Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">
+                <span class="title-main">BLACK OPS 3</span>
+                <span class="title-sub">Random Class Generator</span>
+            </h1>
+            <div class="header-controls">
+                <div class="dlc-toggle">
+                    <label class="toggle-label">
+                        <input type="checkbox" id="dlcToggle" checked>
+                        <span class="toggle-slider"></span>
+                        <span class="toggle-text">DLC Waffen</span>
+                    </label>
+                </div>
+                <div class="weapon-filter">
+                    <select id="weaponFilter" class="filter-select">
+                        <option value="all">Alle Waffen</option>
+                        <option value="assault">Sturmgewehre</option>
+                        <option value="smg">MPs</option>
+                        <option value="lmg">LMGs</option>
+                        <option value="sniper">Scharfschützen</option>
+                        <option value="shotgun">Schrotflinten</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+ 
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Specialist Card -->
+            <div class="card specialist-card fade-in">
+                <h2 class="card-title">
+                    <i class="fas fa-user-ninja"></i> Specialist
+                </h2>
+                <div id="specialistContent" class="card-content">
+                    <div class="specialist-info">
+                        <h3 class="specialist-name">-</h3>
+                        <p class="specialist-ability">Ability: -</p>
+                        <p class="specialist-weapon">Weapon: -</p>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Weapons Section -->
+            <div class="weapons-section">
+                <!-- Primary Weapon Card -->
+                <div class="card weapon-card primary-card fade-in">
+                    <h2 class="card-title">
+                        <i class="fas fa-crosshairs"></i> Primärwaffe
+                    </h2>
+                    <div id="primaryContent" class="card-content">
+                        <h3 class="weapon-name">-</h3>
+                        <div class="weapon-type">-</div>
+                        <div class="attachments-list" id="primaryAttachments">
+                            <p class="no-attachments">Keine Aufsätze</p>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Secondary Weapon Card -->
+                <div class="card weapon-card secondary-card fade-in">
+                    <h2 class="card-title">
+                        <i class="fas fa-gun"></i> Sekundärwaffe
+                    </h2>
+                    <div id="secondaryContent" class="card-content">
+                        <h3 class="weapon-name">-</h3>
+                        <div class="weapon-type">-</div>
+                        <div class="attachments-list" id="secondaryAttachments">
+                            <p class="no-attachments">Keine Aufsätze</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Perks Section -->
+            <div class="perks-section">
+                <div class="card perk-card fade-in">
+                    <h2 class="card-title">
+                        <i class="fas fa-shield-alt"></i> Perk 1
+                    </h2>
+                    <div id="perk1Content" class="card-content perk-content">
+                        <div class="perk-slot">-</div>
+                    </div>
+                </div>
+ 
+                <div class="card perk-card fade-in">
+                    <h2 class="card-title">
+                        <i class="fas fa-bolt"></i> Perk 2
+                    </h2>
+                    <div id="perk2Content" class="card-content perk-content">
+                        <div class="perk-slot">-</div>
+                    </div>
+                </div>
+ 
+                <div class="card perk-card fade-in">
+                    <h2 class="card-title">
+                        <i class="fas fa-eye"></i> Perk 3
+                    </h2>
+                    <div id="perk3Content" class="card-content perk-content">
+                        <div class="perk-slot">-</div>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Equipment & Wildcards Section -->
+            <div class="equipment-section">
+                <!-- Equipment Card -->
+                <div class="card equipment-card fade-in">
+                    <h2 class="card-title">
+                        <i class="fas fa-bomb"></i> Ausrüstung
+                    </h2>
+                    <div class="card-content">
+                        <div class="equipment-grid">
+                            <div class="equipment-item">
+                                <h4>Lethal</h4>
+                                <div id="lethalContent" class="equipment-slot">-</div>
+                            </div>
+                            <div class="equipment-item">
+                                <h4>Tactical</h4>
+                                <div id="tacticalContent" class="equipment-slot">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+                <!-- Wildcards Card -->
+                <div class="card wildcards-card fade-in">
+                    <h2 class="card-title">
+                        <i class="fas fa-star"></i> Wildcards
+                    </h2>
+                    <div id="wildcardsContent" class="card-content">
+                        <div class="wildcards-list">
+                            <p class="no-wildcards">Keine Wildcards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+ 
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="points-display">
+                <span class="points-label">Punkte verwendet:</span>
+                <span class="points-value" id="pointsUsed">0</span>
+                <span class="points-max">/ 10</span>
+            </div>
+            <button id="generateButton" class="generate-button">
+                <i class="fas fa-dice"></i>
+                <span>Generate Random Class</span>
+            </button>
+        </footer>
+    </div>
+ 
+    <script src="script.js"></script>
+</body>
+</html>
